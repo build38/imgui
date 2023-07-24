@@ -24,8 +24,8 @@
 
 // Library Version
 // (Integer encoded as XYYZZ for use in #if preprocessor conditionals, e.g. '#if IMGUI_VERSION_NUM >= 12345')
-#define IMGUI_VERSION       "1.89.7"
-#define IMGUI_VERSION_NUM   18971
+#define IMGUI_VERSION       "1.89.7-b38-patch"
+#define IMGUI_VERSION_NUM   18972
 #define IMGUI_HAS_TABLE
 
 /*
