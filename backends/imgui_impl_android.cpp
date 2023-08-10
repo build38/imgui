@@ -227,6 +227,11 @@ int32_t ImGui_ImplAndroid_HandleInputEvent(AInputEvent* input_event)
                 io.AddMousePosEvent(AMotionEvent_getX(input_event, event_pointer_index), AMotionEvent_getY(input_event, event_pointer_index));
                 io.AddMouseButtonEvent(0, event_action == AMOTION_EVENT_ACTION_DOWN);
             }
+            //https://github.com/ocornut/imgui/issues/6627
+            if(event_action == AMOTION_EVENT_ACTION_UP)
+            {
+                io.AddMousePosEvent(-FLT_MAX, -FLT_MAX);
+            }
             break;
         case AMOTION_EVENT_ACTION_BUTTON_PRESS:
         case AMOTION_EVENT_ACTION_BUTTON_RELEASE:
